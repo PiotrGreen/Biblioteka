@@ -30,9 +30,13 @@ def main1():
         identyfikator1 = input("Co wybrałes to to podaj. ")
         usun_klienta(identyfikator1, opcja1)
     elif co_robic == "5":
-        wypozycz("2634", "Rzeka")
+        idklienta = input("Podaj id klienta który chce wypożyczyć książke.")
+        tytuly = input("Podaj tytuły książek oddzielone przecinkem: ").split(',')
+        wypozycz(idklienta, *tytuly)
     elif co_robic == "6":
-        zwrot("2634", "Rzeka")
+        idklienta1 = input("Podaj id klienta który chce zwrócić książki.")
+        tytuly1 = input("Podaj tytuły książek oddzielone przecinkem: ").split(',')
+        zwrot(idklienta1, *tytuly1)
 
 
 if __name__ == "__main__":
